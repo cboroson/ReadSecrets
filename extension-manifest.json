@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 1,
+  "id": "cboroson-ReadSecrets",
+  "name": "Read Secrets from Key Vault",
+  "version": "1.1.2",
+  "publisher": "cboroson",
+  "public": true,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Release task for reading secrets from Key Vault for sharing values across releases.",
+  "scopes": [
+    "vso.build",
+    "vso.serviceendpoint"
+  ],    
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "Key Vault",
+    "Key",
+    "Vault",
+    "Secret",
+    "Configuration"
+  ],
+  "content": {
+    "details": {
+      "path": "readme.md"
+    },
+    "license": {
+      "path": "ReadSecrets-extension/license.txt"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/cboroson/ReadSecrets"
+    },
+    "support": {
+      "uri": "https://github.com/cboroson/ReadSecrets"
+    }
+  },
+
+
+
+  "branding": {
+    "color": "rgb(36, 43, 50)",
+    "theme": "dark"
+  },
+  "icons": {
+    "default": "ReadSecrets-extension/images/secrets.png"
+  },
+  "files": [
+  {
+    "path": "ReadSecrets-release", "addressable": true
+  }
+],
+
+  "contributions": [
+    {
+      "id": "cboroson-ReadSecrets",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Reads values from Key Vault to allow sharing data between releases.",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "ReadSecrets-release"
+      }
+    }
+  ]
+}
